@@ -1,5 +1,6 @@
 ﻿using HexagonArchitecture.Domain.Interfaces.Data;
 using HexagonArchitecture.Domain.Interfaces.Ddd;
+using HexagonArchitecture.Infrastructure.Interfaces;
 using JetBrains.Annotations;
 
 namespace HexagonArchitecture.Domain.Interfaces.Cqrs.GenericCommands
@@ -17,9 +18,9 @@ namespace HexagonArchitecture.Domain.Interfaces.Cqrs.GenericCommands
         public TKey Handle(TDto input)
         {
             var id = (input as IEntity)?.Id;
-            var entity = id != null && !id.Equals(default(TKey)
+            var entity = id != null && !id.Equals(default(TKey))
                         ? mapper.Map(input, UnitOfWork.Find<TEntity>(id))
-                        : mapper.Map<TEntity>(input);
+                        : mapper.Map<TDto, TEntity>(input);
 
             if (entity.IsNew)
             {

@@ -1,0 +1,17 @@
+﻿{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "HexagonArchitecture.Domain.Core": "1.0.0-*",
+    "HexagonArchitecture.Domain.Interfaces": "1.0.0-*",
+    "HexagonArchitecture.Services.Interfaces": "1.0.0-*"
+  },
+
+  "frameworks": {
+        "netcoreapp1.1": {
+          "dependencies": {
+            "NETStandard.Library": "1.6.0"
+          }
+        }
+    }
+}
