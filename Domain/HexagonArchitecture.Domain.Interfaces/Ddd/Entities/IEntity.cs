@@ -1,4 +1,4 @@
-﻿namespace HexagonArchitecture.Domain.Interfaces.Ddd
+﻿namespace HexagonArchitecture.Domain.Interfaces.Ddd.Entities
 {
     public interface IEntity
     {

@@ -1,4 +1,6 @@
-﻿namespace HexagonArchitecture.Domain.Interfaces.Data
+﻿using HexagonArchitecture.Domain.Interfaces.Ddd.Entities;
+
+namespace HexagonArchitecture.Domain.Interfaces.Data
 {
     #region Using
 

@@ -10,7 +10,8 @@
       "HexagonArchitecture.Domain.Interfaces/1.0.0": {
         "dependencies": {
           "NETStandard.Library": "1.6.0",
-          "JetBrains.Annotations": "10.2.1"
+          "JetBrains.Annotations": "10.2.1",
+          "HexagonArchitecture.Infrastructure.Interfaces": "1.0.0"
         },
         "runtime": {
           "HexagonArchitecture.Domain.Interfaces.dll": {}
@@ -731,6 +732,15 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "HexagonArchitecture.Infrastructure.Interfaces/1.0.0": {
+        "dependencies": {
+          "JetBrains.Annotations": "10.2.1",
+          "NETStandard.Library": "1.6.0"
+        },
+        "runtime": {
+          "HexagonArchitecture.Infrastructure.Interfaces.dll": {}
+        }
       }
     }
   },
@@ -1049,6 +1059,11 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-cRkGXM7P/vaDOzBi+6ZiLSstqThquokeSJoPYCpNliXhXkhWM53LITt2cZQFTslr2pjl14E+vlwVoL9870CeaA=="
+    },
+    "HexagonArchitecture.Infrastructure.Interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

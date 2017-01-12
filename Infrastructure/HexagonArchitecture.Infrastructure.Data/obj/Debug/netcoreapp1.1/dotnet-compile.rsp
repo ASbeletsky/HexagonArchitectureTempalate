@@ -13,6 +13,7 @@
 --version:1.0.0.0
 --informational-version:1.0.0
 --target-framework:.NETCoreApp,Version=v1.1
+--reference:C:\Users\beletsky.anton\.nuget\packages\JetBrains.Annotations\10.2.1\lib\netstandard1.0\JetBrains.Annotations.NetStandard.dll
 --reference:C:\Users\beletsky.anton\.nuget\packages\Microsoft.Win32.Primitives\4.0.1\ref\netstandard1.3\Microsoft.Win32.Primitives.dll
 --reference:C:\Users\beletsky.anton\.nuget\packages\System.AppContext\4.1.0\ref\netstandard1.6\System.AppContext.dll
 --reference:C:\Users\beletsky.anton\.nuget\packages\System.Collections\4.0.11\ref\netstandard1.3\System.Collections.dll
@@ -57,5 +58,7 @@
 --reference:C:\Users\beletsky.anton\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\beletsky.anton\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
 --reference:D:\Projects\Self education\HexagonArchitectureTempalate\Domain\HexagonArchitecture.Domain.Core\bin\Debug\netcoreapp1.1\HexagonArchitecture.Domain.Core.dll
+--reference:D:\Projects\Self education\HexagonArchitectureTempalate\Domain\HexagonArchitecture.Domain.Interfaces\bin\Debug\netcoreapp1.1\HexagonArchitecture.Domain.Interfaces.dll
+--reference:D:\Projects\Self education\HexagonArchitectureTempalate\Infrastructure\HexagonArchitecture.Infrastructure.Interfaces\bin\Debug\netstandard1.6\HexagonArchitecture.Infrastructure.Interfaces.dll
 D:\Projects\Self education\HexagonArchitectureTempalate\Infrastructure\HexagonArchitecture.Infrastructure.Data\Class1.cs
 D:\Projects\Self education\HexagonArchitectureTempalate\Infrastructure\HexagonArchitecture.Infrastructure.Data\Properties\AssemblyInfo.cs

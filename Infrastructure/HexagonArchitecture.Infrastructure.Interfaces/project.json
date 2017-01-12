@@ -5,7 +5,8 @@
   },
   "dependencies": {
     "JetBrains.Annotations": "10.2.1",
-    "NETStandard.Library": "1.6.0"
+    "NETStandard.Library": "1.6.0",
+    "System.Linq.Dynamic.Core": "1.0.6.9"
   },
   "frameworks": {
     "netstandard1.6": {
