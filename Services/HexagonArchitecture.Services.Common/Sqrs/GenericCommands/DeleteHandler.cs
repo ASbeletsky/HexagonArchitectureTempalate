@@ -1,12 +1,11 @@
-﻿using HexagonArchitecture.Domain.Interfaces.Ddd.Entities;
-
-namespace HexagonArchitecture.Domain.Interfaces.Cqrs.GenericCommands
+﻿namespace HexagonArchitectureTempalate.Services.Common.Sqrs.GenericCommands
 {
     #region Using
 
     using System;
+    using HexagonArchitecture.Domain.Interfaces.Cqrs;
     using HexagonArchitecture.Domain.Interfaces.Data;
-    using HexagonArchitecture.Domain.Interfaces.Ddd;
+    using HexagonArchitecture.Domain.Interfaces.Ddd.Entities;
     using JetBrains.Annotations;
 
     #endregion

@@ -1,0 +1,18 @@
+﻿{
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "debugType": "portable"
+  },
+  "dependencies": {
+      "System.Linq.Dynamic.Core": "1.0.6.9",
+      "HexagonArchitecture.Infrastructure.Interfaces": "1.0.0-*",
+      "HexagonArchitectureTempalate.Services.Common": "1.0.0-*"
+  },
+    "frameworks": {
+        "netcoreapp1.1": {
+            "dependencies": {
+                "NETStandard.Library": "1.6.0"
+            }
+        }
+    }
+}

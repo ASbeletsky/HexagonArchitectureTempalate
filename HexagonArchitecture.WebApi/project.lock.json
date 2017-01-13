@@ -3470,6 +3470,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v1.1",
         "dependencies": {
+          "HexagonArchitecture.Infrastructure.Interfaces": "1.0.0",
           "JetBrains.Annotations": "10.2.1",
           "NETStandard.Library": "1.6.0"
         },
@@ -3480,20 +3481,18 @@
           "netcoreapp1.1/HexagonArchitecture.Domain.Interfaces.dll": {}
         }
       },
-      "HexagonArchitecture.Services/1.0.0": {
+      "HexagonArchitecture.Infrastructure.Interfaces/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v1.1",
         "dependencies": {
-          "HexagonArchitecture.Domain.Core": "1.0.0",
-          "HexagonArchitecture.Domain.Interfaces": "1.0.0",
-          "HexagonArchitecture.Services.Interfaces": "1.0.0",
+          "JetBrains.Annotations": "10.2.1",
           "NETStandard.Library": "1.6.0"
         },
         "compile": {
-          "netcoreapp1.1/HexagonArchitecture.Services.dll": {}
+          "netcoreapp1.1/HexagonArchitecture.Infrastructure.Interfaces.dll": {}
         },
         "runtime": {
-          "netcoreapp1.1/HexagonArchitecture.Services.dll": {}
+          "netcoreapp1.1/HexagonArchitecture.Infrastructure.Interfaces.dll": {}
         }
       },
       "HexagonArchitecture.Services.Interfaces/1.0.0": {
@@ -9562,10 +9561,10 @@
       "path": "../Domain/HexagonArchitecture.Domain.Interfaces/project.json",
       "msbuildProject": "../Domain/HexagonArchitecture.Domain.Interfaces/HexagonArchitecture.Domain.Interfaces.xproj"
     },
-    "HexagonArchitecture.Services/1.0.0": {
+    "HexagonArchitecture.Infrastructure.Interfaces/1.0.0": {
       "type": "project",
-      "path": "../Services/HexagonArchitecture.Services/project.json",
-      "msbuildProject": "../Services/HexagonArchitecture.Services/HexagonArchitecture.Services.xproj"
+      "path": "../Infrastructure/HexagonArchitecture.Infrastructure.Interfaces/project.json",
+      "msbuildProject": "../Infrastructure/HexagonArchitecture.Infrastructure.Interfaces/HexagonArchitecture.Infrastructure.Interfaces.xproj"
     },
     "HexagonArchitecture.Services.Interfaces/1.0.0": {
       "type": "project",

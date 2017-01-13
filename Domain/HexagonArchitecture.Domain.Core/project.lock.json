@@ -1084,6 +1084,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v1.1",
         "dependencies": {
+          "HexagonArchitecture.Infrastructure.Interfaces": "1.0.0",
           "JetBrains.Annotations": "10.2.1",
           "NETStandard.Library": "1.6.0"
         },
@@ -1092,6 +1093,20 @@
         },
         "runtime": {
           "netcoreapp1.1/HexagonArchitecture.Domain.Interfaces.dll": {}
+        }
+      },
+      "HexagonArchitecture.Infrastructure.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v1.1",
+        "dependencies": {
+          "JetBrains.Annotations": "10.2.1",
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "netcoreapp1.1/HexagonArchitecture.Infrastructure.Interfaces.dll": {}
+        },
+        "runtime": {
+          "netcoreapp1.1/HexagonArchitecture.Infrastructure.Interfaces.dll": {}
         }
       }
     }
@@ -4061,6 +4076,11 @@
       "type": "project",
       "path": "../HexagonArchitecture.Domain.Interfaces/project.json",
       "msbuildProject": "../HexagonArchitecture.Domain.Interfaces/HexagonArchitecture.Domain.Interfaces.xproj"
+    },
+    "HexagonArchitecture.Infrastructure.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../../Infrastructure/HexagonArchitecture.Infrastructure.Interfaces/project.json",
+      "msbuildProject": "../../Infrastructure/HexagonArchitecture.Infrastructure.Interfaces/HexagonArchitecture.Infrastructure.Interfaces.xproj"
     }
   },
   "projectFileDependencyGroups": {

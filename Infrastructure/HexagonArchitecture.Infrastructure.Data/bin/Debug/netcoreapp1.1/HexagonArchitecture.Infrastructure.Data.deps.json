@@ -745,7 +745,8 @@
       "HexagonArchitecture.Domain.Interfaces/1.0.0": {
         "dependencies": {
           "NETStandard.Library": "1.6.0",
-          "JetBrains.Annotations": "10.2.1"
+          "JetBrains.Annotations": "10.2.1",
+          "HexagonArchitecture.Infrastructure.Interfaces": "1.0.0"
         },
         "runtime": {
           "HexagonArchitecture.Domain.Interfaces.dll": {}
@@ -753,8 +754,8 @@
       },
       "HexagonArchitecture.Infrastructure.Interfaces/1.0.0": {
         "dependencies": {
-          "JetBrains.Annotations": "10.2.1",
-          "NETStandard.Library": "1.6.0"
+          "NETStandard.Library": "1.6.0",
+          "JetBrains.Annotations": "10.2.1"
         },
         "runtime": {
           "HexagonArchitecture.Infrastructure.Interfaces.dll": {}

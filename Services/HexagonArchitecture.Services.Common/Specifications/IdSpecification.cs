@@ -1,4 +1,4 @@
-﻿namespace HexagonArchitecture.Domain.Interfaces.Ddd.Specifications
+﻿namespace HexagonArchitecture.Services.Common.Specifications
 {
     #region Using
 

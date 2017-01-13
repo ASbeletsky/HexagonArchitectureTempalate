@@ -56,6 +56,6 @@
 -r:"C:\Users\beletsky.anton\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll"
 -r:"D:\Projects\Self education\HexagonArchitectureTempalate\Domain\HexagonArchitecture.Domain.Core\bin\Debug\netcoreapp1.1\HexagonArchitecture.Domain.Core.dll"
 -r:"D:\Projects\Self education\HexagonArchitectureTempalate\Domain\HexagonArchitecture.Domain.Interfaces\bin\Debug\netcoreapp1.1\HexagonArchitecture.Domain.Interfaces.dll"
--r:"D:\Projects\Self education\HexagonArchitectureTempalate\Infrastructure\HexagonArchitecture.Infrastructure.Interfaces\bin\Debug\netstandard1.6\HexagonArchitecture.Infrastructure.Interfaces.dll"
+-r:"D:\Projects\Self education\HexagonArchitectureTempalate\Infrastructure\HexagonArchitecture.Infrastructure.Interfaces\bin\Debug\netcoreapp1.1\HexagonArchitecture.Infrastructure.Interfaces.dll"
 "D:\Projects\Self education\HexagonArchitectureTempalate\Infrastructure\HexagonArchitecture.Infrastructure.Data\Class1.cs"
 "D:\Projects\Self education\HexagonArchitectureTempalate\Infrastructure\HexagonArchitecture.Infrastructure.Data\Properties\AssemblyInfo.cs"

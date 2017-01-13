@@ -1082,16 +1082,16 @@
       },
       "HexagonArchitecture.Infrastructure.Interfaces/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v1.6",
+        "framework": ".NETCoreApp,Version=v1.1",
         "dependencies": {
           "JetBrains.Annotations": "10.2.1",
           "NETStandard.Library": "1.6.0"
         },
         "compile": {
-          "netstandard1.6/HexagonArchitecture.Infrastructure.Interfaces.dll": {}
+          "netcoreapp1.1/HexagonArchitecture.Infrastructure.Interfaces.dll": {}
         },
         "runtime": {
-          "netstandard1.6/HexagonArchitecture.Infrastructure.Interfaces.dll": {}
+          "netcoreapp1.1/HexagonArchitecture.Infrastructure.Interfaces.dll": {}
         }
       }
     }

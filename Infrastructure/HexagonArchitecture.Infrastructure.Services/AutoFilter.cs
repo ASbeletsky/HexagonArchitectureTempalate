@@ -1,4 +1,6 @@
-﻿namespace HexagonArchitecture.Infrastructure.Services
+﻿using HexagonArchitectureTempalate.Services.Common.Extensions
+
+namespace HexagonArchitecture.Infrastructure.Services
 {
     #region Using
 
@@ -6,7 +8,6 @@
     using System.Collections.Generic;
     using System.Linq;
     using HexagonArchitecture.Infrastructure.Interfaces;
-    using HexagonArchitecture.Infrastructure.Interfaces.Extensions;
     using JetBrains.Annotations;
 
     #endregion

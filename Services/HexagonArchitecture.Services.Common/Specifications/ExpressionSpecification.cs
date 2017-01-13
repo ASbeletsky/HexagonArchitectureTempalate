@@ -1,10 +1,15 @@
-﻿using System;
-using System.Linq.Expressions;
-using HexagonArchitecture.Infrastructure.Interfaces.Extensions;
-using JetBrains.Annotations;
-
-namespace HexagonArchitecture.Domain.Interfaces.Ddd.Specifications
+﻿namespace HexagonArchitecture.Services.Common.Specifications
 {
+    #region Using
+
+    using System;
+    using System.Linq.Expressions;
+    using HexagonArchitecture.Domain.Interfaces.Ddd.Specifications;
+    using HexagonArchitecture.Services.Common.Extensions;
+    using JetBrains.Annotations;
+
+    #endregion
+
     [PublicAPI]
     public class ExpressionSpecification<T> : ISpecification<T>
     {

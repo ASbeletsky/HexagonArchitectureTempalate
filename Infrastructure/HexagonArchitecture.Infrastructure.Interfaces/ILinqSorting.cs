@@ -6,8 +6,8 @@
 
     #endregion
 
-    public interface ILinqSpecification<T> where T: class
+    public interface ILinqSorting<T>
     {
-        IQueryable<T> Apply(IQueryable<T> query);
+        IOrderedQueryable<T> Apply(IQueryable<T> queryable);
     }
 }

@@ -1,10 +1,14 @@
-﻿using System;
-using System.Collections.Concurrent;
-using System.Linq.Expressions;
-using JetBrains.Annotations;
-
-namespace HexagonArchitecture.Infrastructure.Interfaces.Extensions
+﻿namespace HexagonArchitecture.Services.Common.Extensions
 {
+    #region Using
+
+    using System;
+    using System.Collections.Concurrent;
+    using System.Linq.Expressions;
+    using JetBrains.Annotations;
+
+    #endregion
+
     [PublicAPI]
     public static class ExpressionExtensions
     {
