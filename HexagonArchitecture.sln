@@ -3,32 +3,35 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{53AF274F-AF1D-4E4C-9048-E96A0B2FC360}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DBB8AB28-719A-4625-A61D-8BB26B2ED5D0}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HexagonArchitecture.Domain.Core", "Domain\HexagonArchitecture.Domain.Core\HexagonArchitecture.Domain.Core.xproj", "{8E1F65F2-C966-4FCF-99A8-AE572F1EF898}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "src\Domain", "{53AF274F-AF1D-4E4C-9048-E96A0B2FC360}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D2C67B05-C487-4A74-ADE9-4E56AEC324DA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "src\Services", "{D2C67B05-C487-4A74-ADE9-4E56AEC324DA}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HexagonArchitecture.Services.Interfaces", "Services\HexagonArchitecture.Services.Interfaces\HexagonArchitecture.Services.Interfaces.xproj", "{E28F8DA9-99BF-4590-89DA-92EF6AEF4A50}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "src\Infrastructure", "{48EC0D10-6528-4644-9B32-A1F193C0CE3F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{48EC0D10-6528-4644-9B32-A1F193C0CE3F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "src\Web", "{3D02E556-838D-45E3-A4E5-7CC32158BE2B}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HexagonArchitecture.Infrastructure.Data", "Infrastructure\HexagonArchitecture.Infrastructure.Data\HexagonArchitecture.Infrastructure.Data.xproj", "{7248E2B6-BBE7-45D6-8344-D39A2D2C0C9C}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HexagonArchitecture.Domain.Core", "src\Domain\HexagonArchitecture.Domain.Core\HexagonArchitecture.Domain.Core.xproj", "{8E1F65F2-C966-4FCF-99A8-AE572F1EF898}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HexagonArchitecture.WebApi", "HexagonArchitecture.WebApi\HexagonArchitecture.WebApi.xproj", "{C24E8059-25E3-42FB-8E5D-166092E00340}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HexagonArchitecture.Domain.Interfaces", "src\Domain\HexagonArchitecture.Domain.Interfaces\HexagonArchitecture.Domain.Interfaces.xproj", "{F119DF73-5E50-47C6-9108-E8513F0F44A9}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HexagonArchitecture.Services.Common", "src\Services\HexagonArchitecture.Services.Common\HexagonArchitecture.Services.Common.xproj", "{8A915B69-1470-411F-9763-AAAC5610D150}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HexagonArchitecture.Services.Interfaces", "src\Services\HexagonArchitecture.Services.Interfaces\HexagonArchitecture.Services.Interfaces.xproj", "{E28F8DA9-99BF-4590-89DA-92EF6AEF4A50}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HexagonArchitecture.Infrastructure.Data", "src\Infrastructure\HexagonArchitecture.Infrastructure.Data\HexagonArchitecture.Infrastructure.Data.xproj", "{7248E2B6-BBE7-45D6-8344-D39A2D2C0C9C}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HexagonArchitecture.Infrastructure.Interfaces", "src\Infrastructure\HexagonArchitecture.Infrastructure.Interfaces\HexagonArchitecture.Infrastructure.Interfaces.xproj", "{BFBE620F-D031-49F0-BD9D-A82E58E5D406}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HexagonArchitecture.WebApi", "src\Web\HexagonArchitecture.WebApi\HexagonArchitecture.WebApi.xproj", "{C24E8059-25E3-42FB-8E5D-166092E00340}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C3A9BC8D-0ED9-4699-B75E-80627E054724}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
+		.gitignore = .gitignore
 	EndProjectSection
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HexagonArchitecture.Domain.Interfaces", "Domain\HexagonArchitecture.Domain.Interfaces\HexagonArchitecture.Domain.Interfaces.xproj", "{F119DF73-5E50-47C6-9108-E8513F0F44A9}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HexagonArchitecture.Infrastructure.Interfaces", "Infrastructure\HexagonArchitecture.Infrastructure.Interfaces\HexagonArchitecture.Infrastructure.Interfaces.xproj", "{BFBE620F-D031-49F0-BD9D-A82E58E5D406}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HexagonArchitecture.Infrastructure.Services", "Infrastructure\HexagonArchitecture.Infrastructure.Services\HexagonArchitecture.Infrastructure.Services.xproj", "{B906348D-92DB-4C8F-B7E1-1BD51429B119}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HexagonArchitecture.Services.Common", "Services\HexagonArchitecture.Services.Common\HexagonArchitecture.Services.Common.xproj", "{8A915B69-1470-411F-9763-AAAC5610D150}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,10 +63,6 @@ Global
 		{BFBE620F-D031-49F0-BD9D-A82E58E5D406}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFBE620F-D031-49F0-BD9D-A82E58E5D406}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFBE620F-D031-49F0-BD9D-A82E58E5D406}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B906348D-92DB-4C8F-B7E1-1BD51429B119}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B906348D-92DB-4C8F-B7E1-1BD51429B119}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B906348D-92DB-4C8F-B7E1-1BD51429B119}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B906348D-92DB-4C8F-B7E1-1BD51429B119}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8A915B69-1470-411F-9763-AAAC5610D150}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8A915B69-1470-411F-9763-AAAC5610D150}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A915B69-1470-411F-9763-AAAC5610D150}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -78,7 +77,11 @@ Global
 		{7248E2B6-BBE7-45D6-8344-D39A2D2C0C9C} = {48EC0D10-6528-4644-9B32-A1F193C0CE3F}
 		{F119DF73-5E50-47C6-9108-E8513F0F44A9} = {53AF274F-AF1D-4E4C-9048-E96A0B2FC360}
 		{BFBE620F-D031-49F0-BD9D-A82E58E5D406} = {48EC0D10-6528-4644-9B32-A1F193C0CE3F}
-		{B906348D-92DB-4C8F-B7E1-1BD51429B119} = {48EC0D10-6528-4644-9B32-A1F193C0CE3F}
 		{8A915B69-1470-411F-9763-AAAC5610D150} = {D2C67B05-C487-4A74-ADE9-4E56AEC324DA}
+		{D2C67B05-C487-4A74-ADE9-4E56AEC324DA} = {DBB8AB28-719A-4625-A61D-8BB26B2ED5D0}
+		{53AF274F-AF1D-4E4C-9048-E96A0B2FC360} = {DBB8AB28-719A-4625-A61D-8BB26B2ED5D0}
+		{48EC0D10-6528-4644-9B32-A1F193C0CE3F} = {DBB8AB28-719A-4625-A61D-8BB26B2ED5D0}
+		{3D02E556-838D-45E3-A4E5-7CC32158BE2B} = {DBB8AB28-719A-4625-A61D-8BB26B2ED5D0}
+		{C24E8059-25E3-42FB-8E5D-166092E00340} = {3D02E556-838D-45E3-A4E5-7CC32158BE2B}
 	EndGlobalSection
 EndGlobal
