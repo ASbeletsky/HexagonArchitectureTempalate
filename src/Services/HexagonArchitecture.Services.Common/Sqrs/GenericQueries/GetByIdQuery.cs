@@ -1,4 +1,6 @@
-﻿namespace HexagonArchitectureTempalate.Services.Common.Sqrs.GenericQueries
+﻿using HexagonArchitecture.Domain.Interfaces.Data;
+
+namespace HexagonArchitecture.Services.Common.Sqrs.GenericQueries
 {
     #region Using
 
@@ -11,10 +13,7 @@
 
     #endregion
 
-    public class GetByIdQuery<TKey, TEntity, TResult> : IQuery<TKey, TResult>
-        where TKey : struct, IComparable, IComparable<TKey>, IEquatable<TKey>
-        where TEntity : class, IEntity<TKey>
-        where TResult : IEntity<TKey>
+    public class GetByIdQuery<TKey, TEntity, TResult> : IQuery<TKey, TResult>  where TEntity : class, IEntity<TKey>
     {
         protected readonly ILinqProvider LinqProvider;
 
@@ -29,9 +28,9 @@
             Projector = projector;
         }
 
-        public virtual TResult Ask(TKey specification)
+        public virtual TResult Ask(TKey id)
         {
-            return Projector.Project<TEntity, TResult>(LinqProvider.Query<TEntity>().Where(entity => specification.Equals(entity.Id))).SingleOrDefault();
+            return Projector.Project<TEntity, TResult>(LinqProvider.Query<TEntity>().Where(entity => id.Equals(entity.Id))).SingleOrDefault();
         }
 
     }

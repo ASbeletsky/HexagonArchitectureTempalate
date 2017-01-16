@@ -1,4 +1,6 @@
-﻿namespace HexagonArchitecture.Services.Common.Sqrs.GenericQueries
+﻿using HexagonArchitecture.Domain.Interfaces.Data;
+
+namespace HexagonArchitecture.Services.Common.Sqrs.GenericQueries
 {
     #region Using
 

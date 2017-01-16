@@ -11,7 +11,7 @@ namespace HexagonArchitecture.Domain.Interfaces.Data
 
     public interface IUnitOfWork
     {
-        void Add<TEntity>(TEntity entity) where TEntity : class, IEntity;
+        void AddOrUpdate<TEntity>(TEntity entity) where TEntity : class, IEntity;
 
         void Delete<TEntity>(TEntity entity) where TEntity : class, IEntity;
 

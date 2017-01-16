@@ -29,7 +29,7 @@
 
             if (entity.IsNew)
             {
-                UnitOfWork.Add(entity);
+                UnitOfWork.AddOrUpdate(entity);
             }
 
             UnitOfWork.Commit();

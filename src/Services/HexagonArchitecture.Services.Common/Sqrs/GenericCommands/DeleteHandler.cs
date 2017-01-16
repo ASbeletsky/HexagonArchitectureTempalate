@@ -1,4 +1,4 @@
-﻿namespace HexagonArchitectureTempalate.Services.Common.Sqrs.GenericCommands
+﻿namespace HexagonArchitecture.Services.Common.Sqrs.GenericCommands
 {
     #region Using
 
