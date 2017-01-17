@@ -10,21 +10,21 @@
 
     #endregion
 
-    public class DeleteHandler<TKey, TEntity> : UnitOfWorkBased, ICommandHandler<TKey> where TEntity : class, IEntity<TKey>
+    public class DeleteHandler<TKey, TEntity> : DataSourceBased, ICommandHandler<TKey> where TEntity : class, IEntity<TKey>
     {
-        public DeleteHandler([NotNull] IUnitOfWork unitOfWork) : base(unitOfWork)
+        public DeleteHandler([NotNull] IModifiableDataSource dataSource) : base(dataSource)
         {
         }
 
-        public void Handle(TKey input)
+        public void Handle(TKey id)
         {
-            var entity = this.UnitOfWork.Find<TEntity>(input);
+            var entity = this.DataSource.Find<TEntity>(id);
             if (entity == null)
             {
-                throw new ArgumentException($"Entity {typeof(TEntity).Name} with id={input} doesn't exists");
+                throw new ArgumentException($"Entity {typeof(TEntity).Name} with id={id} doesn't exists");
             }
 
-            this.UnitOfWork.Delete(entity);
+            this.DataSource.Delete(entity);
         }
     }
 }

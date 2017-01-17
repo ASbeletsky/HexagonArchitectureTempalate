@@ -1,11 +1,6 @@
 ﻿namespace HexagonArchitecture.Domain.Interfaces.Ddd.Entities
 {
-    public interface IEntity
-    {
-        object Id { get; }
-    }
-
-    public interface IEntity<out TKey> : IEntity
+    public interface IEntity<out TKey> : IHasId
     {
         new TKey Id { get; }
     }

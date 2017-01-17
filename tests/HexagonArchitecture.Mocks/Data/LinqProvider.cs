@@ -10,7 +10,7 @@
 
      #endregion
 
-    public class LinqProvider : ILinqProvider
+    public class LinqProvider : IQueryableDataSource
     {
         private readonly ICollection<IEntity<int>> _entities;
 
@@ -19,7 +19,7 @@
             _entities = entities;
         }
 
-        public IQueryable<TEntity> Query<TEntity>() where TEntity : class, IEntity
+        public IQueryable<TEntity> Query<TEntity>() where TEntity : class, IHasId
         {
             return (IQueryable<TEntity>) this._entities.AsQueryable();
         }

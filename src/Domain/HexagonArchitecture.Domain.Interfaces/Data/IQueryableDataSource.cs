@@ -8,10 +8,9 @@
 
     #endregion
 
-    public interface ILinqProvider
-
+    public interface IQueryableDataSource
     {
-        IQueryable<TEntity> Query<TEntity>()  where TEntity : class, IEntity;
+        IQueryable<TEntity> Query<TEntity>()  where TEntity : class, IHasId;
         IQueryable Query(Type t);
     }
 }

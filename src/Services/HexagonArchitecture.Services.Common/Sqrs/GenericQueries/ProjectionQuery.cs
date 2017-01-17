@@ -1,6 +1,4 @@
-﻿using HexagonArchitecture.Domain.Interfaces.Data;
-
-namespace HexagonArchitecture.Services.Common.Sqrs.GenericQueries
+﻿namespace HexagonArchitecture.Services.Common.Sqrs.GenericQueries
 {
     #region Using
 
@@ -13,15 +11,16 @@ namespace HexagonArchitecture.Services.Common.Sqrs.GenericQueries
     using HexagonArchitecture.Infrastructure.Interfaces;
     using HexagonArchitecture.Services.Common.Extensions;
     using HexagonArchitecture.Services.Common.Specifications;
+    using HexagonArchitecture.Domain.Interfaces.Data;
     using JetBrains.Annotations;
 
     #endregion
     
     public class ProjectionQuery<TSpecification, TSource, TDest>: IQuery<TSpecification, IEnumerable<TDest>> , IQuery<TSpecification, int>
-        where TSource : class, IEntity
+        where TSource : class, IHasId
         where TDest : class
     {
-        protected readonly ILinqProvider LinqProvider;
+        protected readonly IQueryableDataSource DataSource;
         protected readonly IProjector Projector;
 
         private static readonly Type[] SpecTypes = {
@@ -37,18 +36,18 @@ namespace HexagonArchitecture.Services.Common.Sqrs.GenericQueries
 
         private static string ErrorMessage => SpecTypes.Select(x => x.ToString()).Aggregate((c, n) => $"{c}\n{n}");
 
-        public ProjectionQuery([NotNull] ILinqProvider linqProviderProvider, [NotNull] IProjector projector)
+        public ProjectionQuery([NotNull] IQueryableDataSource dataSource, [NotNull] IProjector projector)
         {
-            if (linqProviderProvider == null) throw new ArgumentNullException(nameof(linqProviderProvider));
+            if (dataSource == null) throw new ArgumentNullException(nameof(dataSource));
             if (projector == null) throw new ArgumentNullException(nameof(projector));
 
-            LinqProvider = linqProviderProvider;
+            DataSource = dataSource;
             Projector = projector;
         }
 
         protected virtual IQueryable<TDest> GetQueryable(TSpecification spec)
         {
-            return LinqProvider
+            return DataSource
                 .Query<TSource>()
                 .MaybeWhere(spec)
                 .MaybeSort(spec)

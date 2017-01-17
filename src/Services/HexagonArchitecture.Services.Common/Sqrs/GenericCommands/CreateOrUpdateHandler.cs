@@ -1,4 +1,4 @@
-﻿namespace HexagonArchitectureTempalate.Services.Common.Sqrs.GenericCommands
+﻿namespace HexagonArchitecture.Services.Common.Sqrs.GenericCommands
 {
     #region Using
 
@@ -10,29 +10,29 @@
 
     #endregion
 
-    public class CreateOrUpdateHandler<TKey, TDto, TEntity> : UnitOfWorkBased, ICommandHandler<TDto, TKey>
+    /// <summary>
+    /// Creates a new or updates existing entity from its DTO
+    /// </summary>
+    /// <typeparam name="TKey">Entity identifier</typeparam>
+    /// <typeparam name="TDto">DTO representation of entity</typeparam>
+    /// <typeparam name="TEntity">Entity to add or update</typeparam>
+    public class CreateOrUpdateHandler<TKey, TDto, TEntity> : DataSourceBased, ICommandHandler<TDto, TKey>
         where TEntity : EntityBase<TKey>
     {
         private IMapper _mapper;
 
-        public CreateOrUpdateHandler([NotNull] IUnitOfWork unitOfWork, [NotNull] IMapper mapper)   : base(unitOfWork)
+        public CreateOrUpdateHandler([NotNull] IModifiableDataSource dataSource, [NotNull] IMapper mapper) : base(dataSource)
         {
             this._mapper = mapper;
         }
 
-        public TKey Handle(TDto input)
+        public TKey Handle(TDto dto)
         {
-            var id = (input as IEntity)?.Id;
-            var entity = id != null && !id.Equals(default(TKey))
-                        ? _mapper.Map(input, UnitOfWork.Find<TEntity>(id))
-                        : _mapper.Map<TDto, TEntity>(input);
-
-            if (entity.IsNew)
-            {
-                UnitOfWork.AddOrUpdate(entity);
-            }
-
-            UnitOfWork.Commit();
+            var id = (dto as IHasId)?.Id;
+            bool isNewEntity = id != null && !id.Equals(default(TKey));
+            var entity = isNewEntity ? _mapper.Map<TDto, TEntity>(dto) : _mapper.Map(dto, DataSource.Find<TEntity>(id));
+            DataSource.AddOrUpdate(entity);
+            DataSource.SaveChanges();
             return entity.Id;
         }
     }

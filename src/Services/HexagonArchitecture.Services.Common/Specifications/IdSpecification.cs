@@ -8,7 +8,7 @@
     #endregion
 
     [PublicAPI]
-    public class IdSpecification<TKey, T> : ExpressionSpecification<T> where T : IEntity
+    public class IdSpecification<TKey, T> : ExpressionSpecification<T> where T : IHasId
     {
         public IdSpecification(TKey id) : base(entity => entity.Id.Equals(id))
         {

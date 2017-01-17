@@ -1,6 +1,4 @@
-﻿using HexagonArchitecture.Domain.Interfaces.Data;
-
-namespace HexagonArchitecture.Services.Common.Sqrs.GenericQueries
+﻿namespace HexagonArchitecture.Services.Common.Sqrs.GenericQueries
 {
     #region Using
 
@@ -9,18 +7,19 @@ namespace HexagonArchitecture.Services.Common.Sqrs.GenericQueries
     using HexagonArchitecture.Domain.Interfaces.Cqrs;
     using HexagonArchitecture.Domain.Interfaces.Ddd.Entities;
     using HexagonArchitecture.Infrastructure.Interfaces;
+    using HexagonArchitecture.Domain.Interfaces.Data;
     using HexagonArchitecture.Services.Common.Paging;
 
     #endregion
 
     public class PagedQuery<TSortKey, TSpec, TEntity, TDto> : ProjectionQuery<TSpec, TEntity, TDto>,
         IQuery<TSpec, IPagedEnumerable<TDto>>
-        where TEntity : class, IEntity
+        where TEntity : class, IHasId
         where TDto : class
         where TSpec : IPaging<TDto, TSortKey>
     {
-        public PagedQuery(ILinqProvider linqProvider, IProjector projector)
-            : base(linqProvider, projector)
+        public PagedQuery(IQueryableDataSource dataSource, IProjector projector)
+            : base(dataSource, projector)
         {
         }
 
@@ -29,7 +28,5 @@ namespace HexagonArchitecture.Services.Common.Sqrs.GenericQueries
         IPagedEnumerable<TDto> IQuery<TSpec, IPagedEnumerable<TDto>>.Ask(TSpec spec) => GetQueryable(spec).ToPagedEnumerable(spec);
 
         public IQuery<TSpec, IPagedEnumerable<TDto>> AsPaged() => this as IQuery<TSpec, IPagedEnumerable<TDto>>;
-
-
     }
 }

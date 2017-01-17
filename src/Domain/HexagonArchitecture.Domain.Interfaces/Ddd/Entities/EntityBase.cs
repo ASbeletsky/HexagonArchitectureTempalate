@@ -4,7 +4,7 @@
     {
         public TKey Id { get; set; }
 
-        object IEntity.Id => this.Id;
+        object IHasId.Id => this.Id;
 
         public bool IsNew
         {
