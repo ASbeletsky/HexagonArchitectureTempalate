@@ -16,7 +16,7 @@
         {
         }
 
-        public void Handle(TKey id)
+        public void Execute(TKey id)
         {
             var entity = this.DataSource.Find<TEntity>(id);
             if (entity == null)

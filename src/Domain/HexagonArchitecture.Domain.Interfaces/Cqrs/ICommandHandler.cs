@@ -10,13 +10,13 @@ namespace HexagonArchitecture.Domain.Interfaces.Cqrs
     [PublicAPI]
     public interface ICommandHandler<in TInput>
     {
-        void Handle(TInput input);
+        void Execute(TInput input);
     }
 
     [PublicAPI]
     public interface ICommandHandler<in TInput, out TOutput>
     {
-        TOutput Handle(TInput input);
+        TOutput Execute(TInput input);
     }
 
     [PublicAPI]
