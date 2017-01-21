@@ -11,11 +11,11 @@ namespace HexagonArchitecture.Domain.Interfaces.Data
 
     public interface IModifiableDataSource
     {
-        void AddOrUpdate<TEntity>(TEntity entity) where TEntity : class, IHasId;
+        void AddOrUpdate<TEntity>(TEntity entity) where TEntity : class, IEntity;
 
-        void Delete<TEntity>(TEntity entity) where TEntity : class, IHasId;
+        void Delete<TEntity>(TEntity entity) where TEntity : class, IEntity;
 
-        TEntity Find<TEntity>(object id) where TEntity : class, IHasId;
+        TEntity Find<TEntity>(object id) where TEntity : class, IEntity;
 
         void SaveChanges();
     }

@@ -16,7 +16,7 @@ namespace HexagonArchitecture.Services.Common.Sqrs.GenericCommands
     /// <typeparam name="TKey">Entity identifier</typeparam>
     /// <typeparam name="TEntity">Entity to add or update</typeparam>
     public class CreateOrUpdateHandler<TKey, TEntity> : DataSourceBased, ICreateOrUpdateEntityCommand<TEntity>
-        where TEntity : class, IHasId
+        where TEntity : class, IEntity
     {
         private IMapper _mapper;
 

@@ -17,7 +17,7 @@
     /// <typeparam name="TDto">DTO representation of entity</typeparam>
     /// <typeparam name="TEntity">Entity to add or update</typeparam>
     public class CreateOrUpdateFromDtoHandler<TKey, TDto, TEntity> : DataSourceBased, ICreateOrUpdateEntityCommand<TDto, TEntity>
-        where TEntity : class, IHasId
+        where TEntity : class, IEntity
     {
         private IMapper _mapper;
 
