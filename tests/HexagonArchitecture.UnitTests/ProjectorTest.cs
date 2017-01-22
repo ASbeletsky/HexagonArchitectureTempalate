@@ -13,7 +13,7 @@ namespace HexagonArchitecture.UnitTests
 {
     public class ProjectorTest : IDisposable
     {
-        private IModifiableDataSource dataSource = new EfDataSource(new BlogsDbContext());
+        private IModifiableDataSource dataSource = new EfDataSource();
         private readonly Blog blog;
         public ProjectorTest()
         {
@@ -22,9 +22,10 @@ namespace HexagonArchitecture.UnitTests
                 Url = "test-blog.com",
                 Posts = new List<Post>()
                 {
-                    new Post() {Title = "post1", Content = "content1"},
-                    new Post() {Title = "post2", Content = "content2"}
+                    new Post(){Title = "title1", Content = "text1"},
+                    new Post(){Title = "title2", Content = "text2"}
                 }
+
             };
 
             dataSource.AddOrUpdate<Blog>(blog);

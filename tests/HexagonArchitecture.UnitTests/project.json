@@ -16,7 +16,8 @@
         "HexagonArchitecture.Infrastructure.Components": "1.0.0-*",
         "HexagonArchitecture.Mocks": "1.0.0-*",
         "HexagonArchitecture.Domain.Core": "1.0.0-*",
-        "HexagonArchitecture.Services.Dto": "1.0.0-*"
+      "HexagonArchitecture.Services.Dto": "1.0.0-*",
+      "Microsoft.DotNet.InternalAbstractions": "1.0.500-preview2-1-003177"
     },
     "testRunner": "xunit",
     "frameworks": {

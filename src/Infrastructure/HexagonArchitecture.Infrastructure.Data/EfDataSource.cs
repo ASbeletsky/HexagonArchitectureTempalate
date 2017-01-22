@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using HexagonArchitecture.Domain.Interfaces.Data;
 using HexagonArchitecture.Domain.Interfaces.Ddd.Entities;
+using HexagonArchitecture.Infrastructure.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace HexagonArchitecture.Infrastructure.Data
@@ -8,6 +9,11 @@ namespace HexagonArchitecture.Infrastructure.Data
     public class EfDataSource : IQueryableDataSource, IModifiableDataSource
     {
         private readonly DbContext _context;
+
+        public EfDataSource()
+            : this(ServiceProvider.Current.GetService<BlogsDbContext>())
+        {
+        }
 
         public EfDataSource(DbContext context)
         {

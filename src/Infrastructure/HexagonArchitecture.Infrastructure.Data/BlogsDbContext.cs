@@ -15,7 +15,11 @@ namespace HexagonArchitecture.Infrastructure.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Blog>().ToTable("blog");
+            modelBuilder.Entity<Blog>()
+                .ToTable("blog")
+                .HasMany(blog => blog.Posts)
+                .WithOne(post => post.Blog)
+                .HasForeignKey(post => post.BlogId);
             modelBuilder.Entity<Post>()
                 .ToTable("post")
                 .HasOne(post => post.Blog)

@@ -4,8 +4,9 @@
     "debugType": "portable"
   },
   "dependencies": {
-    "Npgsql.EntityFrameworkCore.PostgreSQL": "1.1.0",
-    "HexagonArchitecture.Domain.Core": "1.0.0-*"
+    "HexagonArchitecture.Domain.Core": "1.0.0-*",
+    "HexagonArchitecture.Infrastructure.Interfaces": "1.0.0-*",
+    "Npgsql.EntityFrameworkCore.PostgreSQL": "1.1.0"
   },
   "frameworks": {
     "netcoreapp1.1": {
