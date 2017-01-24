@@ -1,11 +1,15 @@
-﻿using System.Linq;
-using HexagonArchitecture.Domain.Interfaces.Data;
-using HexagonArchitecture.Domain.Interfaces.Ddd.Entities;
-using HexagonArchitecture.Infrastructure.Interfaces;
-using Microsoft.EntityFrameworkCore;
-
-namespace HexagonArchitecture.Infrastructure.Data
+﻿namespace HexagonArchitecture.Infrastructure.Data
 {
+    #region Using
+
+    using System.Linq;
+    using HexagonArchitecture.Domain.Interfaces.Data;
+    using HexagonArchitecture.Domain.Interfaces.Ddd.Entities;
+    using HexagonArchitecture.Infrastructure.Interfaces;
+    using Microsoft.EntityFrameworkCore;
+
+    #endregion
+
     public class EfDataSource : IQueryableDataSource, IModifiableDataSource
     {
         private readonly DbContext _context;
@@ -19,6 +23,8 @@ namespace HexagonArchitecture.Infrastructure.Data
         {
             this._context = context;
         }
+
+        internal DbContext Context => _context;
 
         public IQueryable<TEntity> Query<TEntity>() where TEntity : class, IHasId
         {

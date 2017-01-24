@@ -15,16 +15,19 @@ namespace HexagonArchitecture.Infrastructure.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Blog>()
-                .ToTable("blog")
-                .HasMany(blog => blog.Posts)
-                .WithOne(post => post.Blog)
-                .HasForeignKey(post => post.BlogId);
-            modelBuilder.Entity<Post>()
-                .ToTable("post")
-                .HasOne(post => post.Blog)
-                .WithMany(blog => blog.Posts)
-                .HasForeignKey(post => post.BlogId);
+            var blogs = modelBuilder.Entity<Blog>().ToTable("blog");
+            blogs.HasKey(blog => blog.Id);
+            blogs.Property(blog => blog.Id).ValueGeneratedOnAdd();
+            blogs.HasMany(blog => blog.Posts)
+                 .WithOne(post => post.Blog)
+                 .HasForeignKey(post => post.BlogId);
+
+            var posts = modelBuilder.Entity<Post>().ToTable("post");
+            posts.HasKey(post => post.Id);
+            posts.Property(post => post.Id).ValueGeneratedOnAdd();
+            posts.HasOne(post => post.Blog)
+                 .WithMany(blog => blog.Posts)
+                 .HasForeignKey(post => post.BlogId);
         }
     }
 }

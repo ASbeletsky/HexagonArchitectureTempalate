@@ -2,6 +2,11 @@
 {
     public class EntityBase<TKey> : IEntity<TKey>
     {
+        public EntityBase()
+        {
+            this.Id = default(TKey);
+        }
+
         public TKey Id { get; set; }
 
         object IHasId.Id => this.Id;
