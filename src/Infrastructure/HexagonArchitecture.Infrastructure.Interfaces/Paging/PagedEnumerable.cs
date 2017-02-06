@@ -1,8 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using HexagonArchitecture.Infrastructure.Interfaces;
 
-namespace HexagonArchitecture.Services.Common.Paging
+namespace HexagonArchitecture.Infrastructure.Interfaces.Paging
 {
     public class PagedEnumerable<T> : IPagedEnumerable<T>
     {

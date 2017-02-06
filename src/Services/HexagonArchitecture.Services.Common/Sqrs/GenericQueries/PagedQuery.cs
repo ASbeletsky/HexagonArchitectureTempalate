@@ -1,4 +1,7 @@
-﻿namespace HexagonArchitecture.Services.Common.Sqrs.GenericQueries
+﻿using HexagonArchitecture.Infrastructure.Interfaces.Paging;
+using HexagonArchitecture.Services.Common.Extensions;
+
+namespace HexagonArchitecture.Services.Common.Sqrs.GenericQueries
 {
     #region Using
 
@@ -8,7 +11,6 @@
     using HexagonArchitecture.Domain.Interfaces.Ddd.Entities;
     using HexagonArchitecture.Infrastructure.Interfaces;
     using HexagonArchitecture.Domain.Interfaces.Data;
-    using HexagonArchitecture.Services.Common.Paging;
 
     #endregion
 

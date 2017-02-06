@@ -24,7 +24,7 @@ namespace HexagonArchitecture.Infrastructure.Components
 
         }
 
-        public InstanceAutoMapper(AM.IConfigurationProvider configuration, bool skipConfigurationValidation = false)
+        public InstanceAutoMapper(AM.IConfigurationProvider configuration, bool skipConfigurationValidation)
         {
             Configuration = configuration;
 

@@ -1,7 +1,8 @@
-﻿namespace HexagonArchitecture.Services.Common.Paging
+﻿using HexagonArchitecture.Infrastructure.Interfaces.Paging;
+
+namespace HexagonArchitecture.Services.Common.Extensions
 {
     #region Using
-
     using System;
     using System.Collections.Generic;
     using System.Linq;

@@ -28,7 +28,8 @@
 
         public virtual TResult Ask(TKey id)
         {
-            return Projector.Project<TEntity, TResult>(DataSource.Query<TEntity>().Where(entity => id.Equals(entity.Id))).SingleOrDefault();
+            var entities = DataSource.Query<TEntity>().Where(entity => entity.Id.Equals(id));
+            return Projector.Project<TEntity, TResult>(entities).FirstOrDefault();
         }
 
     }

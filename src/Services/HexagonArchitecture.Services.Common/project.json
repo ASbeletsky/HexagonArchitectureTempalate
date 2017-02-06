@@ -5,6 +5,7 @@
   },
   "dependencies": {
     "HexagonArchitecture.Domain.Core": "1.0.0-*",
+    "HexagonArchitecture.Domain.Interfaces": "1.0.0-*",
     "HexagonArchitecture.Infrastructure.Interfaces": "1.0.0-*",
     "System.Linq.Dynamic.Core": "1.0.6.9"
   },
