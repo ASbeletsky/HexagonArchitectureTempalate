@@ -5,8 +5,13 @@ namespace HexagonArchitecture.Domain.Core
 {    
     public class Blog : EntityBase<int>
     {
+        public Blog()
+        {
+            this.Posts = new HashSet<Post>();
+        }
+
         public string Url { get; set; }
 
-        public List<Post> Posts { get; set; }
+        public ICollection<Post> Posts { get; set; }
     }
 }

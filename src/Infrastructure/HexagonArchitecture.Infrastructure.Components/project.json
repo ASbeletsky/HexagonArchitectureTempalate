@@ -8,13 +8,14 @@
         "HexagonArchitecture.Domain.Interfaces": "1.0.0-*",
         "HexagonArchitecture.Services.Common": "1.0.0-*",
         "HexagonArchitecture.Infrastructure.Data": "1.0.0-*",
+        "HexagonArchitecture.Services.Dto": "1.0.0-*",
         "AutoMapper": "5.2.*",
         "Autofac.Extensions.DependencyInjection" : "4.0.*"
     },
     "frameworks": {
         "netcoreapp1.1": {
             "dependencies": {
-                "NETStandard.Library": "1.6.0"
+                "NETStandard.Library": "1.6.1"
             }
         }
     }

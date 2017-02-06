@@ -21,7 +21,7 @@
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<BlogsDbContext>().AsSelf().SingleInstance();
-            builder.RegisterType<StaticAutoMapper>().As(typeof(IMapper), typeof(IProjector));
+            builder.RegisterType<InstanceAutoMapper>().As(typeof(IMapper), typeof(IProjector));
             builder.RegisterType<EfDataSource>().As(typeof(IQueryableDataSource), typeof(IModifiableDataSource));
         }                      
     }

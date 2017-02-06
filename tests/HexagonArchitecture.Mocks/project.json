@@ -7,12 +7,15 @@
         "HexagonArchitecture.Domain.Core": "1.0.0-*",
         "HexagonArchitecture.Infrastructure.Interfaces": "1.0.0-*",
         "HexagonArchitecture.Services.Common": "1.0.0-*",
-        "System.Linq.Dynamic.Core": "1.0.6.9"
+        "HexagonArchitecture.Infrastructure.Data": "1.0.0-*",
+        "Microsoft.EntityFrameworkCore": "1.1.0-*",
+        "System.Linq.Dynamic.Core": "1.0.6.9",
+        "Microsoft.EntityFrameworkCore.InMemory": "1.1.0-*"
     },
     "frameworks": {
         "netcoreapp1.1": {
             "dependencies": {
-                "NETStandard.Library": "1.6.0"
+                "NETStandard.Library": "1.6.1"
             }
         }
     }

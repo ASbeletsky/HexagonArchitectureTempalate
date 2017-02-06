@@ -14,6 +14,7 @@
         "Moq": "4.6.38-*",
         "HexagonArchitecture.Services.Common": "1.0.0-*",
         "HexagonArchitecture.Infrastructure.Components": "1.0.0-*",
+
         "HexagonArchitecture.Mocks": "1.0.0-*",
         "HexagonArchitecture.Domain.Core": "1.0.0-*",
         "HexagonArchitecture.Services.Dto": "1.0.0-*",

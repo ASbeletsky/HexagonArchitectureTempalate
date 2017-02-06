@@ -5,13 +5,27 @@ namespace HexagonArchitecture.Infrastructure.Data
 {
     public class BlogsDbContext : DbContext
     {
+        public BlogsDbContext()
+        {
+        }
+
+        public BlogsDbContext(DbContextOptions<BlogsDbContext> options)
+            : base(options)
+        {
+        }
+
+
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Post> Posts { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Host=localhost;Database=blogdb;Username=postgres;Password=80963144514Aa");
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseNpgsql("Host=localhost;Database=blogdb;Username=postgres;Password=80963144514Aa");
+            }
         }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
