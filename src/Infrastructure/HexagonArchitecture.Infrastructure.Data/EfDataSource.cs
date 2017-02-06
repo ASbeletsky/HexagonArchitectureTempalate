@@ -37,7 +37,6 @@
                 this._context.Set<TEntity>().Add(entity);
             else
                 this._context.Entry(entity).State = EntityState.Modified;
-            this.SaveChanges();
         }
 
         public void Delete<TEntity>(TEntity entity) where TEntity : class, IEntity
@@ -55,6 +54,11 @@
         public void SaveChanges()
         {
             this._context.SaveChanges();
+        }
+
+        public void Dispose()
+        {
+            _context.Dispose();
         }
     }
 }

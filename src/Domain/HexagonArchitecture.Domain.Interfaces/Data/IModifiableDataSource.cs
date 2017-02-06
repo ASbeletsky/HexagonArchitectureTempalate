@@ -9,14 +9,15 @@ namespace HexagonArchitecture.Domain.Interfaces.Data
 
     #endregion
 
-    public interface IModifiableDataSource
+    public interface IModifiableDataSource : IDisposable
+
     {
-        void AddOrUpdate<TEntity>(TEntity entity) where TEntity : class, IEntity;
+    void AddOrUpdate<TEntity>(TEntity entity) where TEntity : class, IEntity;
 
-        void Delete<TEntity>(TEntity entity) where TEntity : class, IEntity;
+    void Delete<TEntity>(TEntity entity) where TEntity : class, IEntity;
 
-        TEntity Find<TEntity>(object id) where TEntity : class, IEntity;
+    TEntity Find<TEntity>(object id) where TEntity : class, IEntity;
 
-        void SaveChanges();
+    void SaveChanges();
     }
 }

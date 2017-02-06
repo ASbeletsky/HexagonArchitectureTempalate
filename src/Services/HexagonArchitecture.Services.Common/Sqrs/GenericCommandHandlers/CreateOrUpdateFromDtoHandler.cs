@@ -1,4 +1,4 @@
-﻿namespace HexagonArchitecture.Services.Common.Sqrs.GenericCommands
+﻿namespace HexagonArchitecture.Services.Common.Sqrs.GenericCommandHandlers
 {
     #region Using
 
@@ -29,7 +29,7 @@
         public object Execute(TDto dto)
         {
             var id = (dto as IHasId)?.Id;
-            bool isNewEntity = id != null && !id.Equals(default(TKey));
+            bool isNewEntity = id == null || id.Equals(default(TKey));
             var entity = isNewEntity ? _mapper.Map<TDto, TEntity>(dto) : _mapper.Map(dto, DataSource.Find<TEntity>(id));
             DataSource.AddOrUpdate(entity);
             DataSource.SaveChanges();

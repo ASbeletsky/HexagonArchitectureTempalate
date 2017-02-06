@@ -8,14 +8,13 @@ using JetBrains.Annotations;
 
 #endregion
 
-namespace HexagonArchitecture.Services.Common.Sqrs.GenericCommands
+namespace HexagonArchitecture.Services.Common.Sqrs.GenericCommandHandlers
 {
     /// <summary>
-    /// Creates a new or updates existing entity from dto
+    /// Creates a new or updates existing entity
     /// </summary>
-    /// <typeparam name="TKey">Entity identifier</typeparam>
     /// <typeparam name="TEntity">Entity to add or update</typeparam>
-    public class CreateOrUpdateHandler<TKey, TEntity> : DataSourceBased, ICreateOrUpdateEntityCommand<TEntity>
+    public class CreateOrUpdateHandler<TEntity> : DataSourceBased, ICreateOrUpdateEntityCommand<TEntity>
         where TEntity : class, IEntity
     {
         private IMapper _mapper;

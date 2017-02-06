@@ -2,6 +2,7 @@
 
 namespace HexagonArchitecture.Domain.Interfaces.Cqrs
 {
+
     public interface ICreateOrUpdateEntityCommand<in TEntity> : ICommandHandler<TEntity, object>
         where TEntity : IHasId
     {

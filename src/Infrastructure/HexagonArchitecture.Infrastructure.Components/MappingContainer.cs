@@ -8,7 +8,9 @@ namespace HexagonArchitecture.Infrastructure.Components
     {
         public MappingContainer()
         {
-            CreateMap<Post, PostDto>().ForMember(dest => dest.BlogUrl, cfg => cfg.MapFrom(src => src.Blog.Url));
+            CreateMap<Post, PostDto>()
+                .ForMember(dest => dest.BlogUrl, cfg => cfg.MapFrom(src => src.Blog.Url))
+                .ReverseMap();
         }
     }
 }
