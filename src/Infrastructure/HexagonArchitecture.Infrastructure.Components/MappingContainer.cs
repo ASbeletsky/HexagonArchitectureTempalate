@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using HexagonArchitecture.Domain.Core;
+using HexagonArchitecture.Domain.Core.Entities;
 using HexagonArchitecture.Services.Dto;
 using HexagonArchitecture.Services.Dto.Properties;
 

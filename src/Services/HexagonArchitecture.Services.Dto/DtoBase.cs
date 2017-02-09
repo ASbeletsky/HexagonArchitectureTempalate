@@ -2,10 +2,9 @@
 
 namespace HexagonArchitecture.Services.Dto
 {
-    public class DtoBase<TKey> : IHasId
+    public class DtoBase<TKey> : IHasId<TKey>
     {
         public TKey Id { get; set; }
-
         object IHasId.Id => this.Id;
     }
 }

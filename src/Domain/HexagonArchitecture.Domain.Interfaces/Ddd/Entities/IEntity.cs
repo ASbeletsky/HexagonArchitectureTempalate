@@ -5,7 +5,7 @@
         bool IsNew { get; }
     }
 
-    public interface IEntity<out TKey> : IEntity
+    public interface IEntity<out TKey> : IEntity, IHasId<TKey>
     {
         new TKey Id { get; }
     }

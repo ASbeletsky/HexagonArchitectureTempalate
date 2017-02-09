@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using HexagonArchitecture.Domain.Interfaces.Ddd.Entities;
 
-namespace HexagonArchitecture.Domain.Core
+namespace HexagonArchitecture.Domain.Core.Entities
 {    
     public class Blog : EntityBase<int>
     {

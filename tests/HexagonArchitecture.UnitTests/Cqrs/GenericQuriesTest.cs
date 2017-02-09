@@ -1,20 +1,23 @@
-﻿
-using System.Collections.Generic;
-using System.Linq;
-using HexagonArchitecture.Domain.Core;
-using HexagonArchitecture.Domain.Interfaces.Data;
-using HexagonArchitecture.Infrastructure.Components;
-using HexagonArchitecture.Infrastructure.Interfaces;
-using HexagonArchitecture.Mocks.Data;
-using HexagonArchitecture.Services.Common.Specifications;
-using HexagonArchitecture.Services.Common.Sqrs.GenericCommandHandlers;
-using HexagonArchitecture.Services.Common.Sqrs.GenericQueries;
-using HexagonArchitecture.Services.Dto;
-using HexagonArchitecture.Services.Dto.Properties;
-using Xunit;
-
-namespace HexagonArchitecture.UnitTests.Cqrs
+﻿namespace HexagonArchitecture.UnitTests.Cqrs
 {
+    #region Using
+
+    using System.Collections.Generic;
+    using System.Linq;
+    using HexagonArchitecture.Domain.Core.Entities;
+    using HexagonArchitecture.Domain.Interfaces.Data;
+    using HexagonArchitecture.Infrastructure.Components;
+    using HexagonArchitecture.Infrastructure.Interfaces;
+    using HexagonArchitecture.Domain.Common.Specifications;
+    using HexagonArchitecture.Domain.Common.Specifications.Paging;
+    using HexagonArchitecture.Domain.Common.Sqrs.GenericCommandHandlers;
+    using HexagonArchitecture.Domain.Common.Sqrs.GenericQueries;
+    using HexagonArchitecture.Mocks;
+    using HexagonArchitecture.Services.Dto;
+    using HexagonArchitecture.Services.Dto.Properties;
+    using Xunit;
+
+    #endregion
 
     public class GenericQuriesTest
     {
@@ -52,9 +55,14 @@ namespace HexagonArchitecture.UnitTests.Cqrs
         [Fact]
         public void CanMakePaginationQuery()
         {
-            var nonEmptyPosts = new ExpressionSpecification<Post>(post => post.Content.Any());
-            var query = new PagedQuery<int, ExpressionSpecification<Post>, Post, PostDto>(dataSource, projector);
+            var nonEmptyPosts = new NonEmptyPosts();
+            var query = new PagedQuery<int, IdPaging<PostDto, int>, Post, PostDto>(dataSource, projector);
 
+
+            var result = query.AsPaged().Ask(nonEmptyPosts);
+
+            Assert.True(result.Any());
+            Assert.Equal(3, result.TotalCount);
         }
 
         private void IntitializeDataSource()

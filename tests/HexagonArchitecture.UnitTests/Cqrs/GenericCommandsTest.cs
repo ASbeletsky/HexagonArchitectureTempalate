@@ -1,16 +1,15 @@
-﻿using System;
-using HexagonArchitecture.Services.Dto;
-
-namespace HexagonArchitecture.UnitTests.Cqrs
+﻿namespace HexagonArchitecture.UnitTests.Cqrs
 {
     #region Using
 
-    using HexagonArchitecture.Domain.Core;
     using HexagonArchitecture.Domain.Interfaces.Data;
     using HexagonArchitecture.Infrastructure.Components;
     using HexagonArchitecture.Infrastructure.Interfaces;
-    using HexagonArchitecture.Mocks.Data;
-    using HexagonArchitecture.Services.Common.Sqrs.GenericCommandHandlers;
+    using System;
+    using HexagonArchitecture.Domain.Common.Sqrs.GenericCommandHandlers;
+    using HexagonArchitecture.Domain.Core.Entities;
+    using HexagonArchitecture.Mocks;
+    using HexagonArchitecture.Services.Dto;
     using Xunit;
 
     #endregion

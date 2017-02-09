@@ -4,4 +4,9 @@ namespace HexagonArchitecture.Domain.Interfaces.Ddd.Entities
     {
         object Id { get; }
     }
+
+    public interface IHasId<out TKey> : IHasId
+    {
+        new TKey Id { get; }
+    }
 }

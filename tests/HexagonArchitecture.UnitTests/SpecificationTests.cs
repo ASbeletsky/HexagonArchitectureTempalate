@@ -1,9 +1,13 @@
-﻿using HexagonArchitecture.Domain.Core;
-using HexagonArchitecture.Services.Common.Specifications;
-using Xunit;
-
-namespace HexagonArchitecture.UnitTests
+﻿namespace HexagonArchitecture.UnitTests
 {
+    #region Using
+
+    using HexagonArchitecture.Domain.Common.Specifications;
+    using HexagonArchitecture.Domain.Core.Entities;
+    using Xunit;
+
+    #endregion
+
     public class SpecificationTests
     {
         private Post _post = new Post() {Id = 10};

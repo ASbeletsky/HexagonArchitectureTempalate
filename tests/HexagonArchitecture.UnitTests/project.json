@@ -12,7 +12,8 @@
         "xunit": "2.1.0",
         "dotnet-test-xunit": " 2.2.0-preview2-build1029",
         "Moq": "4.6.38-*",
-        "HexagonArchitecture.Services.Common": "1.0.0-*",
+        "HexagonArchitecture.Domain.Core": "1.0.0-*",
+        "HexagonArchitecture.Domain.Common": "1.0.0-*",
         "HexagonArchitecture.Infrastructure.Components": "1.0.0-*",
 
         "HexagonArchitecture.Mocks": "1.0.0-*",

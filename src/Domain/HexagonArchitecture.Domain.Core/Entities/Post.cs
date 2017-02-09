@@ -1,6 +1,6 @@
 ﻿using HexagonArchitecture.Domain.Interfaces.Ddd.Entities;
 
-namespace HexagonArchitecture.Domain.Core
+namespace HexagonArchitecture.Domain.Core.Entities
 {
     public class Post : EntityBase<int>
     {

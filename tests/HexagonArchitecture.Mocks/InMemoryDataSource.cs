@@ -1,8 +1,7 @@
-﻿using HexagonArchitecture.Domain.Interfaces.Data;
-using HexagonArchitecture.Infrastructure.Data;
+﻿using HexagonArchitecture.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace HexagonArchitecture.Mocks.Data
+namespace HexagonArchitecture.Mocks
 {
     public class InMemoryDataSource : EfDataSource
     {

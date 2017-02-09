@@ -1,4 +1,5 @@
 ﻿using HexagonArchitecture.Domain.Core;
+using HexagonArchitecture.Domain.Core.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace HexagonArchitecture.Infrastructure.Data

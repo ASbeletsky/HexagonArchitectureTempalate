@@ -4,12 +4,12 @@
 
     using System;
     using System.Linq;
-    using HexagonArchitecture.Domain.Core;
     using HexagonArchitecture.Domain.Interfaces.Data;
     using HexagonArchitecture.Infrastructure.Components;
     using HexagonArchitecture.Infrastructure.Interfaces;
-    using HexagonArchitecture.Mocks.Data;
     using HexagonArchitecture.Services.Dto;
+    using HexagonArchitecture.Domain.Core.Entities;
+    using HexagonArchitecture.Mocks;
     using Xunit;
 
     #endregion
