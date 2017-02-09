@@ -1,9 +1,9 @@
-﻿namespace HexagonArchitecture.Infrastructure.Interfaces
+﻿using System.Collections.Generic;
+using JetBrains.Annotations;
+
+namespace HexagonArchitecture.Domain.Common.Specifications.Paging
 {
     #region Using
-
-    using System.Collections.Generic;
-    using JetBrains.Annotations;
 
     #endregion
 

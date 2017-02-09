@@ -1,11 +1,9 @@
-﻿using HexagonArchitecture.Infrastructure.Interfaces;
-using HexagonArchitecture.Infrastructure.Interfaces.Paging;
-using HexagonArchitecture.Domain.Interfaces.Ddd.Entities;
+﻿using HexagonArchitecture.Domain.Interfaces.Ddd.Entities;
 
-namespace HexagonArchitecture.Services.Common.Specifications
+namespace HexagonArchitecture.Domain.Common.Specifications.Paging
 {
     public class IdPaging<TEntity, TKey>: Paging<TEntity, TKey>
-        where TEntity : class, IEntity<TKey>
+        where TEntity : class, IHasId<TKey>
     {
         public IdPaging(int page, int take)
             : base(page, take, new Sorting<TEntity, TKey>(x => x.Id, SortOrder.Desc))

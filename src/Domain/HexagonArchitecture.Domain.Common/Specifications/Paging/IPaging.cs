@@ -1,4 +1,4 @@
-﻿namespace HexagonArchitecture.Infrastructure.Interfaces.Paging
+﻿namespace HexagonArchitecture.Domain.Common.Specifications.Paging
 {
     public interface IPaging<TEntity, TSortKey>
         where TEntity : class
