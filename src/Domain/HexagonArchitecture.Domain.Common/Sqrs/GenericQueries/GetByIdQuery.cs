@@ -12,6 +12,25 @@
 
     #endregion
 
+    public class GetByIdQuery<TKey, TAggregateRoot> : IQuery<TKey, TAggregateRoot>  where TAggregateRoot : class, IAggregateRoot<TKey>
+    {
+        protected readonly IQueryableDataSource DataSource;
+        protected readonly IProjector Projector;
+
+        public GetByIdQuery([NotNull] IQueryableDataSource dataSource)
+        {
+            if (dataSource == null) throw new ArgumentNullException(nameof(dataSource));
+            DataSource = dataSource;
+        }
+
+        public virtual TAggregateRoot Ask(TKey id)
+        {
+            return DataSource
+                .Query<TAggregateRoot>()
+                .FirstOrDefault(aggregateRoot => aggregateRoot.Id.Equals(id));
+        }
+    }
+
     public class GetByIdQuery<TKey, TEntity, TResult> : IQuery<TKey, TResult>  where TEntity : class, IEntity<TKey>
     {
         protected readonly IQueryableDataSource DataSource;
@@ -31,6 +50,5 @@
             var entities = DataSource.Query<TEntity>().Where(entity => entity.Id.Equals(id));
             return Projector.Project<TEntity, TResult>(entities).FirstOrDefault();
         }
-
     }
 }
