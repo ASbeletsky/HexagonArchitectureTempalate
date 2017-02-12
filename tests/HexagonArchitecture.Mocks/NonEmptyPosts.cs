@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using HexagonArchitecture.Domain.Common.Specifications;
-using HexagonArchitecture.Domain.Common.Specifications.Paging;
+using HexagonArchitecture.Domain.Interfaces.Paging;
 using HexagonArchitecture.Services.Dto;
 
 namespace HexagonArchitecture.Mocks

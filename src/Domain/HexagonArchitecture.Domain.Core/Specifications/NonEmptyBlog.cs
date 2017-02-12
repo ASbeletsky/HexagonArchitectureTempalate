@@ -1,11 +1,12 @@
-﻿namespace HexagonArchitecture.Domain.Core.Specifications
+﻿using HexagonArchitecture.Domain.Interfaces.Paging;
+
+namespace HexagonArchitecture.Domain.Core.Specifications
 {
 
     #region Using
 
     using System.Linq;
     using HexagonArchitecture.Domain.Common.Specifications;
-    using HexagonArchitecture.Domain.Common.Specifications.Paging;
     using HexagonArchitecture.Domain.Core.Entities;
 
     #endregion

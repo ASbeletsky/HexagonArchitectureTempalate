@@ -42,8 +42,8 @@
         {
             var postDtoForCreate = new PostDto() { Title = "title1", Content = "text1" };
 
-            var createPostFromDto = new CreateOrUpdateFromDtoHandler<int, PostDto, Post>(dataSource, mapper);
-            var createdPostId = (int)createPostFromDto.Execute(postDtoForCreate);
+            var createPostFromDto = new CreateOrUpdateFromDtoHandler<PostDto, Post>(dataSource, mapper);
+            var createdPostId = createPostFromDto.Execute<int>(postDtoForCreate);
             var createdPost = dataSource.Find<Post>(createdPostId);
 
             Assert.Equal(postDtoForCreate.Title, createdPost.Title);
@@ -70,8 +70,8 @@
             int existingPostId = CreateTestPostEntity();
             var postForUpdateDto = new PostDto() {Id = existingPostId, Title = "title2"};
 
-            var updatePostFromDto = new CreateOrUpdateFromDtoHandler<int, PostDto, Post>(dataSource, mapper);
-            updatePostFromDto.Execute(postForUpdateDto);
+            var updatePostFromDto = new CreateOrUpdateFromDtoHandler<PostDto, Post>(dataSource, mapper);
+            updatePostFromDto.Execute<int>(postForUpdateDto);
 
             var updatedPost = dataSource.Find<Post>(postForUpdateDto.Id);
             Assert.Equal(postForUpdateDto.Title, updatedPost.Title);

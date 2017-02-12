@@ -1,4 +1,7 @@
-﻿namespace HexagonArchitecture.Domain.Common.Extensions
+﻿using HexagonArchitecture.Domain.Interfaces;
+using HexagonArchitecture.Domain.Interfaces.Paging;
+
+namespace HexagonArchitecture.Domain.Common.Extensions
 {
     #region Using
 
@@ -6,7 +9,6 @@
     using System.Collections.Generic;
     using System.Linq;
     using HexagonArchitecture.Domain.Common.Specifications;
-    using HexagonArchitecture.Domain.Common.Specifications.Paging;
 
     #endregion
 

@@ -9,15 +9,12 @@
 
     public interface IQueryFactory
     {
-        IQuery<T, IExpressionSpecification<T>> GetQuery<T>() where T : class, IHasId;
+        TQuery GetQuery<TResult, TQuery>() where TQuery : IQuery<TResult>;
 
-        IQuery<T, TSpecification> GetQuery<T, TSpecification>()
-            where T : class, IHasId
-            where TSpecification : ISpecification<T>;
+        TQuery GetQuery<TData, TResult, TQuery>() where TQuery : IQuery<TData, TResult>;
 
-        TQuery GetQuery<T, TSpecification, TQuery>()
-            where T : class, IHasId
-            where TSpecification : ISpecification<T>
-            where TQuery : IQuery<T, TSpecification>;
+        IEntityQuery<TEntity> QueryEntity<TEntity>()
+            where TEntity : class, IEntity;
+
     }
 }

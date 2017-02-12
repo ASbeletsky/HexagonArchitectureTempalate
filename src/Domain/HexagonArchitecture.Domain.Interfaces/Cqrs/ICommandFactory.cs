@@ -6,9 +6,11 @@ namespace HexagonArchitecture.Domain.Interfaces.Cqrs
     {
         TCommand GetCommand<TData, TCommand>() where TCommand : ICommandHandler<TData>;
 
-        ICreateOrUpdateEntityCommand<TEntity> GetCreateCommand<TEntity>() where TEntity : class, IHasId;
+        ICreateOrUpdateEntityCommand<TEntity> GetSaveCommand<TEntity>() where TEntity : class, IEntity;
 
-        ICreateOrUpdateEntityCommand<TDto, TEntity> GetCreateCommand<TDto, TEntity>() where TEntity : class, IHasId;
+        ICreateOrUpdateEntityCommand<TDto, TEntity> GetSaveCommand<TDto, TEntity>()
+            where TEntity : class, IEntity
+            where TDto : IHasId;
 
         IDeleteEntityCommand<TKey, TEntity> GetDeleteCommand<TKey, TEntity>() where TEntity : class, IEntity<TKey>;
     }

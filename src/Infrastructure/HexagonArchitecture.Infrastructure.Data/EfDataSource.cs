@@ -1,4 +1,7 @@
-﻿namespace HexagonArchitecture.Infrastructure.Data
+﻿using System;
+using System.Linq.Expressions;
+
+namespace HexagonArchitecture.Infrastructure.Data
 {
     #region Using
 
@@ -29,6 +32,12 @@
         public IQueryable<TEntity> Query<TEntity>() where TEntity : class, IHasId
         {
             return this._context.Set<TEntity>().AsQueryable();
+        }
+
+        public IQueryable<TEntity> Include<TEntity, TProperty>(Expression<Func<TEntity, TProperty>> expression)
+            where TEntity : class, IHasId
+        {
+            return this._context.Set<TEntity>().Include(expression);
         }
 
         public void AddOrUpdate<TEntity>(TEntity entity) where TEntity : class, IEntity

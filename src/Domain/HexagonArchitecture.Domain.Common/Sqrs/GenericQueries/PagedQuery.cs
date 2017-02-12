@@ -1,11 +1,12 @@
-﻿namespace HexagonArchitecture.Domain.Common.Sqrs.GenericQueries
+﻿using HexagonArchitecture.Domain.Interfaces.Paging;
+
+namespace HexagonArchitecture.Domain.Common.Sqrs.GenericQueries
 {
     #region Using
 
     using System.Collections.Generic;
     using System.Linq;
     using HexagonArchitecture.Domain.Common.Extensions;
-    using HexagonArchitecture.Domain.Common.Specifications.Paging;
     using HexagonArchitecture.Domain.Interfaces.Cqrs;
     using HexagonArchitecture.Domain.Interfaces.Data;
     using HexagonArchitecture.Domain.Interfaces.Ddd.Entities;

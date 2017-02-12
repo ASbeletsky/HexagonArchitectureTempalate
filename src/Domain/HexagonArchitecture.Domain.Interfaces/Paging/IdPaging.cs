@@ -1,6 +1,6 @@
 ﻿using HexagonArchitecture.Domain.Interfaces.Ddd.Entities;
 
-namespace HexagonArchitecture.Domain.Common.Specifications.Paging
+namespace HexagonArchitecture.Domain.Interfaces.Paging
 {
     public class IdPaging<TEntity, TKey>: Paging<TEntity, TKey>
         where TEntity : class, IHasId<TKey>

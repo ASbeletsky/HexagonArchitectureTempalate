@@ -1,4 +1,6 @@
-﻿namespace HexagonArchitecture.UnitTests.Cqrs
+﻿using HexagonArchitecture.Domain.Interfaces.Paging;
+
+namespace HexagonArchitecture.UnitTests.Cqrs
 {
     #region Using
 
@@ -9,7 +11,6 @@
     using HexagonArchitecture.Infrastructure.Components;
     using HexagonArchitecture.Infrastructure.Interfaces;
     using HexagonArchitecture.Domain.Common.Specifications;
-    using HexagonArchitecture.Domain.Common.Specifications.Paging;
     using HexagonArchitecture.Domain.Common.Sqrs.GenericCommandHandlers;
     using HexagonArchitecture.Domain.Common.Sqrs.GenericQueries;
     using HexagonArchitecture.Mocks;

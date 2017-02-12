@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HexagonArchitecture.Domain.Common.Specifications.Paging
+namespace HexagonArchitecture.Domain.Interfaces.Paging
 {
     public abstract class Paging<TEntity, TOrderKey> : IPaging<TEntity, TOrderKey>
         where TEntity : class

@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 using JetBrains.Annotations;
 
-namespace HexagonArchitecture.Domain.Common.Specifications
+namespace HexagonArchitecture.Domain.Interfaces
 {
     /// <summary>
     /// Sort order enumeration

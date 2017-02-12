@@ -9,7 +9,7 @@
 
     #endregion
 
-    public class DeleteHandler<TKey, TEntity> : DataSourceBased, ICommandHandler<TKey> where TEntity : class, IEntity<TKey>
+    public class DeleteHandler<TKey, TEntity> : DataSourceBased, IDeleteEntityCommand<TKey, TEntity> where TEntity : class, IEntity<TKey>
     {
         public DeleteHandler([NotNull] IModifiableDataSource dataSource) : base(dataSource)
         {

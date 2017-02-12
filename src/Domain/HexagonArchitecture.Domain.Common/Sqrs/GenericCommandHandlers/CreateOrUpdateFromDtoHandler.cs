@@ -1,4 +1,6 @@
-﻿namespace HexagonArchitecture.Domain.Common.Sqrs.GenericCommandHandlers
+﻿using System;
+
+namespace HexagonArchitecture.Domain.Common.Sqrs.GenericCommandHandlers
 {
     #region Using
 
@@ -13,10 +15,10 @@
     /// <summary>
     /// Creates a new or updates existing entity from dto
     /// </summary>
-    /// <typeparam name="TKey">Entity identifier</typeparam>
     /// <typeparam name="TDto">DTO representation of entity</typeparam>
     /// <typeparam name="TEntity">Entity to add or update</typeparam>
-    public class CreateOrUpdateFromDtoHandler<TKey, TDto, TEntity> : DataSourceBased, ICreateOrUpdateEntityCommand<TDto, TEntity>
+    public class CreateOrUpdateFromDtoHandler<TDto, TEntity> : DataSourceBased, ICreateOrUpdateEntityCommand<TDto, TEntity>
+        where TDto : IHasId
         where TEntity : class, IEntity
     {
         private IMapper _mapper;
@@ -26,14 +28,20 @@
             this._mapper = mapper;
         }
 
+        [Obsolete]
         public object Execute(TDto dto)
+        {
+            return this.Execute<object>(dto);
+        }
+
+        public TKey Execute<TKey>(TDto dto)
         {
             var id = (dto as IHasId)?.Id;
             bool isNewEntity = id == null || id.Equals(default(TKey));
             var entity = isNewEntity ? _mapper.Map<TDto, TEntity>(dto) : _mapper.Map(dto, DataSource.Find<TEntity>(id));
             DataSource.AddOrUpdate(entity);
             DataSource.SaveChanges();
-            return entity.Id;
+            return (TKey) entity.Id;
         }
     }
 }

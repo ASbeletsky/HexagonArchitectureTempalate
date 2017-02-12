@@ -1,9 +1,9 @@
-﻿using System.Threading.Tasks;
-using JetBrains.Annotations;
-
-namespace HexagonArchitecture.Domain.Interfaces.Cqrs
+﻿namespace HexagonArchitecture.Domain.Interfaces.Cqrs
 {
     #region Using
+
+    using System.Threading.Tasks;
+    using JetBrains.Annotations;
 
     #endregion
 
@@ -14,9 +14,9 @@ namespace HexagonArchitecture.Domain.Interfaces.Cqrs
     }
 
     [PublicAPI]
-    public interface IQuery<in TSpecification, out TOutput>
+    public interface IQuery<in TIn, out TOutput>
     {
-        TOutput Ask([NotNull] TSpecification spec);
+        TOutput Ask(TIn data);
     }
 
     [PublicAPI]

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using JetBrains.Annotations;
 
-namespace HexagonArchitecture.Domain.Common.Specifications.Paging
+namespace HexagonArchitecture.Domain.Interfaces.Paging
 {
     #region Using
 
